@@ -31,3 +31,5 @@ urls - Django also provides a way to navigate around the different pages in a we
 - starting modify views.py.
 - creating urls.py file and add wirings for urls
 - link application with a project: go to mysite/urls.py and add link to application main/urls.py
+- setup db sqlite3
+  - change settings.py: add "main.apps.MainConfig" to INSTALLED_APPS. Django uses INSTALLED_APPS as a list of all of the places to look for models, management commands, tests, and other utilities
