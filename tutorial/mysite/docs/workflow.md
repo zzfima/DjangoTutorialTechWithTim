@@ -2,6 +2,8 @@
 
 ## What is Django?
 
+https://www.w3schools.com/django/
+
 Django is a Python framework that makes it easier to create web sites using Python.
 Django follows the MVT design pattern (Model View Template).
 
@@ -10,6 +12,8 @@ Django follows the MVT design pattern (Model View Template).
 - Template - A text file (like an HTML file) containing the layout of the web page, with logic on how to display the data.
 
 ![alt text](image.png)
+
+urls - Django also provides a way to navigate around the different pages in a website. When a user requests a URL, Django decides which view it will send it to. This is done in a file called urls.py.
 
 ## development steps
 
@@ -24,5 +28,6 @@ Django follows the MVT design pattern (Model View Template).
 - creating application named 'main':
   - cd .\mysite
   - python manage.py startapp main
-- starting modify views.py. Django views are Python functions that takes http requests and returns http response, like HTML documents.
--
+- starting modify views.py.
+- creating urls.py file and add wirings for urls
+- link application with a project: go to mysite/urls.py and add link to application main/urls.py
