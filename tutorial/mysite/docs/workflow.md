@@ -42,9 +42,20 @@ urls - Django also provides a way to navigate around the different pages in a we
 - db add items
   - open shell: python manage.py shell
   - write code for creating single ToDoList:
-
-```python
-from main.models import ToDoList, Item
-t = ToDoList(name = "Efim\'s List")
-t.save()
-```
+    ```python
+    from main.models import ToDoList, Item
+    t = ToDoList(name = "Efim\'s List")
+    t.save()
+    ```
+  - write code for reading all ToDoLists:
+    ```python
+    ToDoList.objects.all()
+    ```
+  - write code for reading ToDoList id = 1:
+    ```python
+    ToDoList.objects.get(id = 1)
+    ```
+  - write code for reading all ToDoLists, contains name "Efim\'s List":
+    ```python
+    ToDoList.objects.get(name = "Efim\'s List")
+    ```
