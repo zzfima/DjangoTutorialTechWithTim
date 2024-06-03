@@ -37,4 +37,14 @@ urls - Django also provides a way to navigate around the different pages in a we
   - migration: python manage.py migrate
   - add models into models.py
   - tell Django whe was modified the models (Its kind of staging in git): python manage.py makemigrations main
+  - in created 0001_initial.py file can be seen exactly what changes in model was performed
   - apply those changes: python manage.py migrate. you can see text: Applying main.0001_initial... OK
+- db add items
+  - open shell: python manage.py shell
+  - write code for creating single ToDoList:
+
+```python
+from main.models import ToDoList, Item
+t = ToDoList(name = "Efim\'s List")
+t.save()
+```
