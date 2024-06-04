@@ -63,3 +63,16 @@ urls - Django also provides a way to navigate around the different pages in a we
     del_object = t.get(id=1)
     del_object.delete()
     ```
+- admin dashboard
+  - create login
+    - python manager.py createsuperuser
+    - add name, email, password
+    - save
+    - in project db0 user can be seen in table auth_user
+  - manager runserver
+  - web api: 127.0.0.1:8000/admin
+  - insert username and password
+  - give the dashboard access to db for manage it
+    - goto application admin.py
+    - add ToDoList to admin
+    - in admin dashboard can be seen ToDoList
