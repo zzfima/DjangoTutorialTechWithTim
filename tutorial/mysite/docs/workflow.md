@@ -46,16 +46,17 @@ urls - Django also provides a way to navigate around the different pages in a we
     from main.models import ToDoList, Item
     t = ToDoList(name = "Efim\'s List")
     t.save()
-    ```
-  - write code for reading all ToDoLists:
-    ```python
+    # reading all ToDoLists
     ToDoList.objects.all()
-    ```
-  - write code for reading ToDoList id = 1:
-    ```python
+    # reading ToDoList id = 1
     ToDoList.objects.get(id = 1)
-    ```
-  - write code for reading all ToDoLists, contains name "Efim\'s List":
-    ```python
+    # reading all ToDoLists, contains name "Efim\'s List"
     ToDoList.objects.get(name = "Efim\'s List")
+    # adding item into ToDoList is a little different
+    # than creation of ToDoList, because of relations
+    t.item_set.create(text="Go to the mall", complete = False)
+    # reading all items
+    t.item_set.all()
+    # reading items with id = 1
+    t.item_set.get(id=1)
     ```
