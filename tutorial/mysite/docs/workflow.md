@@ -59,4 +59,7 @@ urls - Django also provides a way to navigate around the different pages in a we
     t.item_set.all()
     # reading items with id = 1
     t.item_set.get(id=1)
+    # deleting
+    del_object = t.get(id=1)
+    del_object.delete()
     ```
