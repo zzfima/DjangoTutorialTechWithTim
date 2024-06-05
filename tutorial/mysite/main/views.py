@@ -15,10 +15,20 @@ def about(response):
 def toDoList(response, id):
     try:
         return HttpResponse(
-            "ToDoList id {} is {}".format(id, ToDoList.objects.get(id=id).name)
+            "ToDoList id={}. Its name={}".format(id, ToDoList.objects.get(id=id).name)
         )
     except:
-        return HttpResponse("id {} not found".format(id))
+        return HttpResponse("id={} not found".format(id))
+
+
+def item(response, id):
+    try:
+        i = Item.objects.get(id=id)
+        return HttpResponse(
+            "Item id={}. Its text={}. Parent ToDoList id={} ".format(id, i.text, i.todoList_id)
+        )
+    except:
+        return HttpResponse("id={} not found".format(id))
 
 
 def home(response):
