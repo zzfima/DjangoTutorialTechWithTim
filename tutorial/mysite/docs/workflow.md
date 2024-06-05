@@ -81,4 +81,4 @@ urls - Django also provides a way to navigate around the different pages in a we
   - add new function of home in views
   - create folder of htmls with same name as application: main/templates/main
   - here create base.html and home.html. Template inheritance. Each inherited page will have the base
-  - 
+  - add binding between view and template. variables from view shown on html
