@@ -14,6 +14,12 @@ def about(response):
 
 def toDoList(response, id):
     try:
-        return HttpResponse("ToDoList id {} is {}".format(id, ToDoList.objects.get(id=id).name))
+        return HttpResponse(
+            "ToDoList id {} is {}".format(id, ToDoList.objects.get(id=id).name)
+        )
     except:
         return HttpResponse("id {} not found".format(id))
+
+
+def home(response):
+    return render(response, "main/home.html", {})

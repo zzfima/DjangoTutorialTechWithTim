@@ -76,3 +76,9 @@ urls - Django also provides a way to navigate around the different pages in a we
     - goto application admin.py
     - add ToDoList to admin
     - in admin dashboard can be seen ToDoList
+- html page
+  - add new route to home in application urls
+  - add new function of home in views
+  - create folder of htmls with same name as application: main/templates/main
+  - here create base.html and home.html. Template inheritance. Each inherited page will have the base
+  - 
