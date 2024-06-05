@@ -33,3 +33,6 @@ def item(response, id):
 
 def home(response):
     return render(response, "main/home.html", {})
+
+def base(response):
+    return render(response, "main/base.html", {"name": "mamaba"})
