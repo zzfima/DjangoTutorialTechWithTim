@@ -1,14 +1,15 @@
 <html>
   <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Default title{% endblock %}</title>
   </head>
   <body>
     <!--variable binded to view using render function-->
     <p>{{name}}</p>
     <div id="content" , name="content">
         <h3>Content block:</h3>
-        <!--contenet block - ovveriding in the inherited templates. In home its ovveriding-->
+        <!--content block - ovveriding in the inherited templates. In home its ovveriding-->
         {% block content %} 
+        <h4>Default content</h4>
         {% endblock %}
     </div>
   </body>
