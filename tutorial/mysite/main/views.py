@@ -34,5 +34,9 @@ def item(response, id):
 def home(response):
     return render(response, "main/home.html", {"name": "home page"})
 
+def listing(response, id):
+    ls = ToDoList.objects.get(id=id)
+    return render(response, "main/listing.html", {"name": "home page", "ls": ls})
+
 def base(response):
     return render(response, "main/base.html", {"name": "base page"})

@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{%block title%}Listing ToDoList{% endblock %}
+
+{% block content %}
+<h4>{{ls.name}}</h4>
+<ul>
+    {% for item in ls.item_set.all %}
+        <li>{{item.text}}</li>
+    {% endfor%}
+</ul>
+{% endblock %}
