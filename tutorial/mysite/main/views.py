@@ -32,7 +32,7 @@ def item(response, id):
 
 
 def home(response):
-    return render(response, "main/home.html", {})
+    return render(response, "main/home.html", {"name": "home page"})
 
 def base(response):
-    return render(response, "main/base.html", {"name": "mamaba"})
+    return render(response, "main/base.html", {"name": "base page"})
